@@ -1,0 +1,12 @@
+
+spring:
+  application:
+    name: service-gateway  # en el file pom.xml deber ser <artifactId>serv-client</artifactId>
+  profiles:
+    active: dev         # si no estable un perfil lo tomara por defecto el perfil "default"
+    #lo tomara dev [demo-client1.yml --> http://localhost:8881/demo-client1/dev]
+  cloud:
+    config:
+      uri: http://localhost:8888 # 8881 redirection to port 8888 inmutable, go to "config server"
+      enabled: true
+
